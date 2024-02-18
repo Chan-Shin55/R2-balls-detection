@@ -1,0 +1,12 @@
+<launch>
+    <node name="ypspur_ros" pkg="ypspur_ros" type="ypspur_ros">
+        <param name="param_file" value="/home/student1/researches/programs/platform/yp-robot-params/robot-params/speego.param"/>
+        <param name="port" value="/dev/serial/by-id/usb-T-frog_project_T-frog_Driver-if00"/>
+        <param name="cmd_vel_expire" value="1.0" />
+    </node>
+    <node name="urg_node" pkg="urg_node" type="urg_node">
+        <param name="serial_port" value="/dev/serial/by-id/usb-Hokuyo_Data_Flex_for_USB_URG-Series_USB_Driver-if00"/>
+    </node>
+    <node name="testProgramNode" pkg="coins_jikken" type="sample4_1.py" output="screen"/>
+
+</launch>

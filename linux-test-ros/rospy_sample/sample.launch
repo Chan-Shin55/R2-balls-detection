@@ -1,0 +1,7 @@
+<launch>
+    <node name="ypspur_ros" pkg="ypspur_ros" type="ypspur_ros">
+        <param name="param_file" value="/home/<user>/researches/programs/platform/yp-robot-params/robot-params/<山彦の機種>.param"/>
+    </node>
+    <node name="joy_node"  pkg="joy" type="joy_node"/>
+	<node name="yourNode" pkg="<package_name>" type="<file_name>.py"/>
+</launch>
